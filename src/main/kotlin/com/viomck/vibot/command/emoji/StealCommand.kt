@@ -117,6 +117,7 @@ private suspend fun findDestGuildFromReactions(
             callback(eligible[NumberEmojis.indexOf(it.emoji.name) - 1])
             selectMessage.delete()
             dmRedirectMessage.delete()
+            stopAwaiting()
         }
     }
 }
